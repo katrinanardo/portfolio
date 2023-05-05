@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Katrina Nardo</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="#" class="link"
+          ><img src="images/logo.png" height="45" width="80" alt=""></a
+        >
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Hi, I am <span class="about__name">Katrina Nardo.</span></h1>
+        <h2 class="about__role">A Front end Developer.</h2>
+        <p class="about__desc">
+          Hello and welcome to my portfolio! My name is Katrina Nardo and I am a wed development student with a passion for creating beautiful and functional websites. 
+          I have been honing my skills in web development, specifically, HTML/CSS/JS, for years now, and I am constantly seeking new challenges to help me grow and expand my knowledge.
+
+        </br></br>
+        
+          My mission as a front-end developer is to bring dynamic, cutting-edge solutions to the world of website development. 
+          I believe that a website should not only look great, but also be user-friendly, responsive, and easy to navigate.
+        </p>
+
+        <div class="about__contact center">
+          <a href="https://drive.google.com/file/d/1VCewM0QsBuKx1dCYZBwi0HOILIt1bUVE/view?usp=share_link" target="_blank">
+            <span class="btn btn--outline">Resume</span>
+          </a>
+
+          <a
+            href="https://github.com/katrinanardo/" target="_blank"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://facebook.com/nardokatrina/" target="_blank"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <img src="images/coffee-shop.png" height="150" width="300" alt="">
+            <h3>Coffee Shop</h3>
+            <p class="project__description">
+              This project showcases the use of MySQL database with PHP integration.
+              This site allows CRUD operations for orders, drinks, etc.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">PHP</li>
+              <li class="project__stack-item">MySQL</li>
+            </ul>
+
+            <a
+              href="https://github.com/katrinanardo/coffee-project" target="_blank"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="http://coffee-shop-project.epizy.com/" target="_blank"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <img src="images/alcollect.jpeg" height="150" width="300" alt="">
+            <h3>Alcollect</h3>
+            <p class="project__description">
+              The Alcollect site is a Search Engine Optimization project. The project's 
+              goal is to improve site's visibility. The site was made in WordPress.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">WordPress</li>
+              <li class="project__stack-item">Google Analytics</li>            
+              <li class="project__stack-item">Ahref</li>
+            </ul>
+
+            <a
+              href="https://alcollect.store/" target="_blank"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <img src="images/pet-shop.png" height="150" width="300" alt="">
+            <h3>Pet Shop</h3>
+            <p class="project__description">
+              A simple pet shop site using HTML & CSS. This site features gallery of 
+              different kind of pets and a page for pet accessories list.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+            </ul>
+
+            <a
+              href="https://github.com/katrinanardo/pet-website-project"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://gilded-sable-94624f.netlify.app/index.html" target="_blank"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <img src="images/restaurant.jpeg" height="150" width="300" alt="">
+            <h3>Restaurant</h3>
+            <p class="project__description">
+              A Restaurant site that features the integration of MongoDB to the site.
+              This site lists restaurants and its details. It also has a search feature
+              wherein user can search restaurants by their name, type, ratings, or location.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">MongoDB</li>
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">JavaScript</li>
+            </ul>
+
+            <a
+              href="https://github.com/katrinanardo/advbase" target="_blank"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://infoman-mongodb-proj.netlify.app/home.html" target="_blank"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <img src="images/angular.jpeg" height="150" width="300" alt="">
+            <h3>Appliance Shop</h3>
+            <p class="project__description">
+              This web application is a project that uses AngularJS. We were able to implement
+              Angular Pipes, NG Services and Reactive Programming to imitate a working
+              appliance shop web application
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">AngularJS</li>
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+            </ul>
+
+            <a
+              href="https://stackblitz.com/edit/midterm-appliance-shop-fnfdbb?file=src%2Fapp%2Fapp.component.ts" target="_blank"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://midterm-appliance-shop-yodw9e.stackblitz.io/" target="_blank"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <img src="images/nature.JPG" height="150" width="300" alt="">
+            <h3>Nature Project</h3>
+            <p class="project__description">
+              This project is a web application about an advocacy for environmental awareness.
+              This project uses mainly, AngularJS, and AOS for animations. ExpressJS and NodeJS
+              were also integrated to apply the CRUD feature for donations and oganization
+              registrations.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">AngularJS</li>
+              <li class="project__stack-item">AOS</li>
+              <li class="project__stack-item">ExpressJS</li>
+              <li class="project__stack-item">NodeJS</li>
+            </ul>
+
+            <a
+              href="https://github.com/WD302-GROUP5-ADWEB/Grou-5Final" target="_blank"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://neon-salamander-387d50.netlify.app" target="_blank"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">HTML</li>
+          <li class="skills__list-item btn btn--plain">CSS</li>
+          <li class="skills__list-item btn btn--plain">JavaScript</li>
+          <li class="skills__list-item btn btn--plain">AngularJS</li>
+          <li class="skills__list-item btn btn--plain">VueJS</li>
+          <li class="skills__list-item btn btn--plain">PHP</li>
+          <li class="skills__list-item btn btn--plain">MongoDB</li>
+          <li class="skills__list-item btn btn--plain">Flutter</li>
+          <li class="skills__list-item btn btn--plain">Dart</li>
+          <li class="skills__list-item btn btn--plain">Java</li>
+          <li class="skills__list-item btn btn--plain">MySQL</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:katrinanardo02@gmail.com">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Location</h5>
+          <p>Angeleños, Brgy. Cuayan, Angeles City, Pampanga, Philippines</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Email</h5>
+          <p>katrinanardo02@gmail.com</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <p>+(63)942-350-9518</p>
+        </div>
+      </div>
+    </footer>
+    
+
+    <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
