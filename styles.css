@@ -1,3 +1,7 @@
+/*===============
+  global styles
+===============*/
+
 * {
   padding: 0;
   margin: 0;
@@ -254,15 +258,35 @@ main {
 
 .about__name {
   color: var(--clr-primary);
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.7s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .about__role {
   margin-top: 1.2em;
+  animation-duration: 0.7s;
+  animation-name: animate-fade;
+  animation-delay: 0.8s;
+  animation-fill-mode: backwards;
 }
-
 .about__desc {
   font-size: 1rem;
   max-width: 600px;
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.8s;
+  animation-fill-mode: backwards;
 }
 
 .about__desc,
@@ -286,6 +310,16 @@ main {
   grid-gap: 2em;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .project {
+    transition: opacity 1.5s ease, transform 1.5s ease;
+  }
+}
+
+.project-animation {
+    opacity: 1;
+    transform: none;
+}
 .project {
   padding: 2em;
   margin: 0 auto;
