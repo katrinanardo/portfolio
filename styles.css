@@ -311,15 +311,16 @@ main {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .project {
+  .project-animate {
+    
+    animation: animate-fade 0.5s 1;
+      
+    animation-delay: 0.7s;
+    animation-fill-mode: backwards;
     transition: opacity 1.5s ease, transform 1.5s ease;
   }
 }
 
-.project-animation {
-    opacity: 1;
-    transform: none;
-}
 .project {
   padding: 2em;
   margin: 0 auto;
