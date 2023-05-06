@@ -61,3 +61,19 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+
+const observer = new IntersectionObserver(entries => {
+	entries.forEach(entry => {
+	  const square = entry.target.querySelector('.projects__grid');
+  
+	  if (entry.isIntersecting) {
+		square.classList.add('project-animate');
+		return; // if we added the class, exit the function
+	  }
+  
+	  // We're not intersecting, so remove the class!
+	  square.classList.remove('project-animate');
+	});
+  });
+  
+  observer.observe(document.querySelector('.projects'));
