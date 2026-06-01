@@ -77,3 +77,48 @@ const observer = new IntersectionObserver(entries => {
   });
   
   observer.observe(document.querySelector('.projects'));
+
+// Project modal
+const overlay = document.getElementById('projectModal');
+const modalClose = document.getElementById('modalClose');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalTags = document.getElementById('modalTags');
+const modalLinks = document.getElementById('modalLinks');
+
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('click', () => openModal(card));
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openModal(card); });
+});
+
+function openModal(card) {
+  modalImg.src = card.dataset.img;
+  modalImg.alt = card.dataset.title + ' screenshot';
+  modalTitle.textContent = card.dataset.title;
+  modalDesc.textContent = card.dataset.desc;
+
+  modalTags.innerHTML = card.dataset.tags.split(',').map(t =>
+    `<li>${t.trim()}</li>`
+  ).join('');
+
+  modalLinks.innerHTML = '';
+  if (card.dataset.github) {
+    modalLinks.innerHTML += `<a href="${card.dataset.github}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source code</a>`;
+  }
+  if (card.dataset.live) {
+    modalLinks.innerHTML += `<a href="${card.dataset.live}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live preview</a>`;
+  }
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
