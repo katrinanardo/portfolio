@@ -1,124 +1,124 @@
-// const body = document.body
+const body = document.body
 
-// const btnTheme = document.querySelector('.fa-moon')
-// const btnHamburger = document.querySelector('.fa-bars')
+const btnTheme = document.querySelector('.fa-moon')
+const btnHamburger = document.querySelector('.fa-bars')
 
-// const addThemeClass = (bodyClass, btnClass) => {
-//   body.classList.add(bodyClass)
-//   btnTheme.classList.add(btnClass)
-// }
+const addThemeClass = (bodyClass, btnClass) => {
+  body.classList.add(bodyClass)
+  btnTheme.classList.add(btnClass)
+}
 
-// const getBodyTheme = localStorage.getItem('portfolio-theme')
-// const getBtnTheme = localStorage.getItem('portfolio-btn-theme')
+const getBodyTheme = localStorage.getItem('portfolio-theme')
+const getBtnTheme = localStorage.getItem('portfolio-btn-theme')
 
-// addThemeClass(getBodyTheme, getBtnTheme)
+addThemeClass(getBodyTheme, getBtnTheme)
 
-// const isDark = () => body.classList.contains('dark')
+const isDark = () => body.classList.contains('dark')
 
-// const setTheme = (bodyClass, btnClass) => {
+const setTheme = (bodyClass, btnClass) => {
 
-// 	body.classList.remove(localStorage.getItem('portfolio-theme'))
-// 	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
+	body.classList.remove(localStorage.getItem('portfolio-theme'))
+	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
 
-//   addThemeClass(bodyClass, btnClass)
+  addThemeClass(bodyClass, btnClass)
 
-// 	localStorage.setItem('portfolio-theme', bodyClass)
-// 	localStorage.setItem('portfolio-btn-theme', btnClass)
-// }
+	localStorage.setItem('portfolio-theme', bodyClass)
+	localStorage.setItem('portfolio-btn-theme', btnClass)
+}
 
-// const toggleTheme = () =>
-// 	isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
+const toggleTheme = () =>
+	isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
 
-// btnTheme.addEventListener('click', toggleTheme)
+btnTheme.addEventListener('click', toggleTheme)
 
-// const displayList = () => {
-// 	const navUl = document.querySelector('.nav__list')
+const displayList = () => {
+	const navUl = document.querySelector('.nav__list')
 
-// 	if (btnHamburger.classList.contains('fa-bars')) {
-// 		btnHamburger.classList.remove('fa-bars')
-// 		btnHamburger.classList.add('fa-times')
-// 		navUl.classList.add('display-nav-list')
-// 	} else {
-// 		btnHamburger.classList.remove('fa-times')
-// 		btnHamburger.classList.add('fa-bars')
-// 		navUl.classList.remove('display-nav-list')
-// 	}
-// }
+	if (btnHamburger.classList.contains('fa-bars')) {
+		btnHamburger.classList.remove('fa-bars')
+		btnHamburger.classList.add('fa-times')
+		navUl.classList.add('display-nav-list')
+	} else {
+		btnHamburger.classList.remove('fa-times')
+		btnHamburger.classList.add('fa-bars')
+		navUl.classList.remove('display-nav-list')
+	}
+}
 
-// btnHamburger.addEventListener('click', displayList)
+btnHamburger.addEventListener('click', displayList)
 
-// const scrollUp = () => {
-// 	const btnScrollTop = document.querySelector('.scroll-top')
+const scrollUp = () => {
+	const btnScrollTop = document.querySelector('.scroll-top')
 
-// 	if (
-// 		body.scrollTop > 500 ||
-// 		document.documentElement.scrollTop > 500
-// 	) {
-// 		btnScrollTop.style.display = 'block'
-// 	} else {
-// 		btnScrollTop.style.display = 'none'
-// 	}
-// }
+	if (
+		body.scrollTop > 500 ||
+		document.documentElement.scrollTop > 500
+	) {
+		btnScrollTop.style.display = 'block'
+	} else {
+		btnScrollTop.style.display = 'none'
+	}
+}
 
-// document.addEventListener('scroll', scrollUp)
+document.addEventListener('scroll', scrollUp)
 
-// const observer = new IntersectionObserver(entries => {
-// 	entries.forEach(entry => {
-// 	  const square = entry.target.querySelector('.projects__grid');
+const observer = new IntersectionObserver(entries => {
+	entries.forEach(entry => {
+	  const square = entry.target.querySelector('.projects__grid');
   
-// 	  if (entry.isIntersecting) {
-// 		square.classList.add('project-animate');
-// 		return; // if we added the class, exit the function
-// 	  }
+	  if (entry.isIntersecting) {
+		square.classList.add('project-animate');
+		return; // if we added the class, exit the function
+	  }
   
-// 	  // We're not intersecting, so remove the class!
-// 	  square.classList.remove('project-animate');
-// 	});
-//   });
+	  // We're not intersecting, so remove the class!
+	  square.classList.remove('project-animate');
+	});
+  });
   
-//   observer.observe(document.querySelector('.projects'));
+  observer.observe(document.querySelector('.projects'));
 
-// // Project modal
-// const overlay = document.getElementById('projectModal');
-// const modalClose = document.getElementById('modalClose');
-// const modalImg = document.getElementById('modalImg');
-// const modalTitle = document.getElementById('modalTitle');
-// const modalDesc = document.getElementById('modalDesc');
-// const modalTags = document.getElementById('modalTags');
-// const modalLinks = document.getElementById('modalLinks');
+// Project modal
+const overlay = document.getElementById('projectModal');
+const modalClose = document.getElementById('modalClose');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalTags = document.getElementById('modalTags');
+const modalLinks = document.getElementById('modalLinks');
 
-// document.querySelectorAll('.project-card').forEach(card => {
-//   card.addEventListener('click', () => openModal(card));
-//   card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openModal(card); });
-// });
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('click', () => openModal(card));
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openModal(card); });
+});
 
-// function openModal(card) {
-//   modalImg.src = card.dataset.img;
-//   modalImg.alt = card.dataset.title + ' screenshot';
-//   modalTitle.textContent = card.dataset.title;
-//   modalDesc.textContent = card.dataset.desc;
+function openModal(card) {
+  modalImg.src = card.dataset.img;
+  modalImg.alt = card.dataset.title + ' screenshot';
+  modalTitle.textContent = card.dataset.title;
+  modalDesc.textContent = card.dataset.desc;
 
-//   modalTags.innerHTML = card.dataset.tags.split(',').map(t =>
-//     `<li>${t.trim()}</li>`
-//   ).join('');
+  modalTags.innerHTML = card.dataset.tags.split(',').map(t =>
+    `<li>${t.trim()}</li>`
+  ).join('');
 
-//   modalLinks.innerHTML = '';
-//   if (card.dataset.github) {
-//     modalLinks.innerHTML += `<a href="${card.dataset.github}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source code</a>`;
-//   }
-//   if (card.dataset.live) {
-//     modalLinks.innerHTML += `<a href="${card.dataset.live}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live preview</a>`;
-//   }
+  modalLinks.innerHTML = '';
+  if (card.dataset.github) {
+    modalLinks.innerHTML += `<a href="${card.dataset.github}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source code</a>`;
+  }
+  if (card.dataset.live) {
+    modalLinks.innerHTML += `<a href="${card.dataset.live}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live preview</a>`;
+  }
 
-//   overlay.classList.add('active');
-//   document.body.style.overflow = 'hidden';
-// }
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
 
-// function closeModal() {
-//   overlay.classList.remove('active');
-//   document.body.style.overflow = '';
-// }
+function closeModal() {
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
 
-// modalClose.addEventListener('click', closeModal);
-// overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-// document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
