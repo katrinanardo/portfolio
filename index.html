@@ -842,7 +842,7 @@
 </div>
 </div>
 </div>
-<div class="contact-form fade-in">
+<!-- <div class="contact-form fade-in">
 <div class="form-row">
 <div class="form-field">
 <label for="fname">First name</label>
@@ -863,7 +863,7 @@
 </div>
 <button class="form-submit" id="submitBtn">Send message</button>
 <p class="form-note" id="formNote"></p>
-</div>
+</div> -->
 </div>
 </div>
 <!-- FOOTER -->
@@ -887,31 +887,31 @@
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  // document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  const submitBtn = document.getElementById('submitBtn');
-  const formNote = document.getElementById('formNote');
+  // const submitBtn = document.getElementById('submitBtn');
+  // const formNote = document.getElementById('formNote');
 
-  submitBtn.addEventListener('click', () => {
-    const fname = document.getElementById('fname').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+  // submitBtn.addEventListener('click', () => {
+  //   const fname = document.getElementById('fname').value.trim();
+  //   const email = document.getElementById('email').value.trim();
+  //   const message = document.getElementById('message').value.trim();
 
-    if (!fname || !email || !message) {
-      formNote.style.color = '#e24b4a';
-      formNote.textContent = 'Please fill in your name, email, and message.';
-      return;
-    }
+  //   if (!fname || !email || !message) {
+  //     formNote.style.color = '#e24b4a';
+  //     formNote.textContent = 'Please fill in your name, email, and message.';
+  //     return;
+  //   }
 
-    submitBtn.textContent = 'Sending…';
-    submitBtn.disabled = true;
+  //   submitBtn.textContent = 'Sending…';
+  //   submitBtn.disabled = true;
 
-    setTimeout(() => {
-      submitBtn.textContent = 'Sent ✓';
-      formNote.style.color = '#3b6d11';
-      formNote.textContent = "Message received! I'll get back to you soon.";
-    }, 1200);
-  });
+  //   setTimeout(() => {
+  //     submitBtn.textContent = 'Sent ✓';
+  //     formNote.style.color = '#3b6d11';
+  //     formNote.textContent = "Message received! I'll get back to you soon.";
+  //   }, 1200);
+  // });
 </script>
 <script>
 const featuredImage=document.querySelector('.project-card.wide .project-img-wrap img');
